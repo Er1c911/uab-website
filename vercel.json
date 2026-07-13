@@ -8,11 +8,13 @@
         { "src": "/build/(.*)", "dest": "/public/build/" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
-    "buildCommand": "npm install && vite build",
+    "buildCommand": "npm install && npm run build && mkdir -p storage/app storage/framework storage/logs",
     "outputDirectory": "public",
     "env": {
+        "APP_KEY": "base64:X+3JYwr0HU5MxmBIFThalhjtnkXCcpL2OWvZ1HX2CXI=",
+        "APP_URL": "@APP_URL",
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
